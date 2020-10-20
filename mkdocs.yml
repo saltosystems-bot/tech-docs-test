@@ -9,5 +9,6 @@ nav:
   - Filter: filter.md
   - Pagination: pagination.md
   - Glossary: glossary.md
+  - Mermaid example: mermaid-example.md
 plugins:
   - techdocs-core
