@@ -5,5 +5,9 @@ nav:
   - Introduction: index.md
   - Contributing: contributing.md
   - Authentication: authentication.md
+  - Errors: errors.md
+  - Filter: filter.md
+  - Pagination: pagination.md
+  - Glossary: glossary.md
 plugins:
   - techdocs-core
