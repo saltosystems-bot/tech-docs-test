@@ -4,6 +4,6 @@ site_description: "Documentation test"
 nav:
   - Introduction: index.md
   - Contributing: contributing.md
-
+  - Authentication: authentication.md
 plugins:
   - techdocs-core
