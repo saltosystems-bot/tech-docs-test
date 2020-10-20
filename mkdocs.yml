@@ -3,6 +3,7 @@ site_description: "Documentation test"
 
 nav:
   - Introduction: index.md
+  - Contributing: contributing.md
 
 plugins:
   - techdocs-core
