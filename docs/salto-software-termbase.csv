@@ -1,0 +1,229 @@
+,,,,,,
+,SPACE,KS,Nebula,Homelok,Common,Definitions
+,Property,Site,Installation,Property/Apartment building,,See this cell
+AP,Access point,Lock,Access point,Door,,"Access point (Nebula): Represents a smart electronic device capable of granting or denying access to a secured area, such as a room, office, apartment, etc. It may also serve to lock/unlock secured containers like cabinets, drawers or lockers. In the real world, it can take on different forms, for example: a door equipped with an electronic escutcheon or cylinder, a control unit (with an electric strike), a padlock, etc. In general, a credential, (see key) must be presented for the access point to grant access. As with all SALTO hardware devices, access points use end-to-end encryption to transfer information to and from the software.
+Not to be confused with the term wireless access point, which is a networking hardware device that allows other Wi-Fi devices to connect to a wired network.
+
+Lock (KS): Locks are what it’s all about for SALTO KS: They provide access to your employees, customers or guests. SALTO locks are connected to a repeater or IQ, so that they can check the user’s access and let them in, or not. In general, SALTO offers a multitude of lock types that will fit any door and any situation."
+,Door,Lock,Access point,,,Door (SPACE): A door within the SALTO system that has controlled access. Doors can be either online or offline.
+,Locker,,Locker,,,"Locker (SPACE): The term ‘locker’ within the SALTO system can refer to a locker, cupboard, display cabinet, box, or case fitted with an electronic device that controls the lock. SALTO lockers are commonly used in corporate organizations, universities, and gyms. "
+,Room,,,,,Room (SPACE): A room assigned to one or more guests in a hotel site
+,Zone,,Access right,,,"Zone (SPACE): A zone is a specified group of access points that are grouped together to make them easier to manage in the system. For example, a zone could be the doors on the first floor, all the lockers in the gym area, or all the doors in the financial services area."
+,Location,,Installation,,,"Location (SPACE): A large area of designated access points in the SALTO system, for example, all of the access points in the headquarters or regional offices of an organization.
+Installation (Nebula): An installation represents any entity (company, office, building, etc.) that uses Nebula. As such, it represents a collection of all the access control objects (such as access points, access rights, users, etc.) that comprise the access control system."
+,Function,,,,,"Function (SPACE): A function is a category of permissions within a SALTO location. For example, if a company creates a location for each of its offices across the country, it can assign functions such as entrances and maintenance, to each location. For the company location Melbourne, for example, the company can assign the entrances function to all building entrances at that location."
+,Elevator group,,,,,
+,Destination,,,,,"Destination (SPACE): Used for elevators. For example, an elevator on the same floor can have 2 different destinations, controlled by the elevator doors. Think of an elevator that has 2 doors, one front and one rear, installed in a building where the elevator goes directly to the house. The front door could be apartment 3A and the back door apartment 3B. The elevator goes to the same floor, but to different destinations."
+,Destination entry terminals,,,,,
+,Outputs,,,,,"Output (SPACE): In the SALTO system, an output is a type of electrical permission or authorization used to activate devices like ESDs or elevators.
+For example, you can control elevator access to specific floors by creating outputs. If a CU is connected to a relay extension board, you can use outputs to specify that only a designated user can activate one or multiple relays in an elevator. If you enable Floor 1 and Floor 3 in their access permissions, the user can only access those specific floors and not Floor 2."
+,Lockdown areas,,,,,
+,Limited occupancy areas,,,,,
+,Roll-call areas,,,,,
+,Access point time periods,,,,,
+,Access point automatic changes,,,,,"Automatic changes (SPACE):You can use access point automatic changes to allow a number of different opening modes to switch automatically and vary across different time periods. Opening modes are defined when you set up doors and/or lockers.
+For example, a door’s opening mode may have automatic changes enabled as follows:
+- 00.00 to 08.00 Office
+- 08.00 to 18.00 Automatic
+- 18.00 to 00.00 Standard"
+Cardholders,Cardholder,People/User,User,Pod member?,,"Cardholder (SPACE): A generic term that covers all persons issued with a key. There can be various types of cardholders, for example, users, who are generally the staff of an organization.
+Pod member (Homelok): Two pod members at different levels:
+- Apartment manager and pod member:
+    - Apartment manager: in a MFH situation I want my apartment to be rented by a company (Free Rentals)
+    - Pod member: Free Rentals can manage my apartment but I have more privileges than them.
+- Pod members and pod members:
+    - In a co-living situation, all the members have the same privileges.
+    - A pod member can only see his/her own events + the ones of his/her guests. An apartment manager can see the events of every member/guest."
+,User,People/User,User,,,"User (Nebula): There are generally two types of users in Nebula.
+- Users who require access to and within your installation
+- Users with management roles
+Typically a user is a person who requires access to and within your installation. Users gain access using a key and to give access to these users you need to assign them access rights.
+The other type of user is one with a management role. This user has the ability to manage different elements of the software. These elements can be other users, the access rights of those users or the access points associated with those access rights, for example. Users with management roles can be differentiated from one another by the type of role that you assign them. Note that users with management roles can also be users of keys."
+,Visitor,People/User,User,,,"Visitor (SPACE): A person requiring temporary access to a site for a specified time period, for example, to do site maintenance"
+,Guest,People/User,User,Pod guest,,"Guest (SPACE): A person who is given a key to allow access for the duration of their stay at a hotel.
+Pod guest (Homelok):
+- Can open doors (PWA or Mobile App or PIN)
+- Doesn’t have authorisation to invite other guests
+- Can be permanent (e.g. kids), temporary or one shot.
+- A pod guest can see only his/her own events."
+,User access levels,Access/Access Groups,Access right,,,"Access levels (SPACE): User access levels are used to define a group of users with the same access permissions, for example, all staff in a department or all managerial staff. This means that if you are configuring a door entry on the Door information screen, you can allow access permissions for that door to all users who belong to a specific user access level. Without user access levels, you would have to associate each individual user with that particular door.
+Access rights (Nebula): Represents a materialized view or snapshot of access permissions. Access rights simplify the management of access permissions for large sets of users with similar access profiles. An access right can be associated with multiple access points."
+,Visitor access levels,Access/Access Groups,Access right,,,
+,Guest access levels,Access/Access Groups,Access right,,,
+,Limited occupancy groups,,,,,"Limited occupancy group (SPACE): A limited occupancy group is a group of users who require access to a specified limited occupancy area, for example, a restricted car park. See Limited Occupancy Areas for information about limited occupancy areas."
+,Cardholder timetable,Timeframe,Schedule,,,"Cardholder timetable (SPACE): Cardholder timetables control the time periods during which a user’s key can be used with a site’s access points. For example, a user who works 12-hour shifts over a four- day period could have a timetable that looks like the following example:
+- 08.00 to 20.00 Monday
+- 08.00 to 20.00 Tuesday
+- 20.00 to 08.00 Wednesday
+- 20.00 to 08.00 Thursday
+A timetable can be set up so that outside of these periods the user’s key is not valid and they cannot access the site.
+When you create cardholder timetables, you can choose which are used with a site’s access points for individual users and user access levels.
+
+Schedule (Nebula): When creating access rights, you can set access points to be available on certain days at certain hours for any user that has that access rights assigned to them. In one step, a selection of users can get the same schedule for the same set of access points. You can add a maximum of three schedules to each access right. By adding schedules you can control the specific times that an access right is valid."
+Keys,Keys / credentials,Tags,Key: see this presentation,,,"Key (SPACE): In the SALTO system, a key (also known as a carrier) controls access to an area, building, and/or site asset (for example, a cupboard or locker). SALTO keys are encoded with the access data that controls who can enter, as well as when and where they can enter. This is why the technology is called SALTO data-on-card. 
+
+Tag (KS): The Tag is the smallest component of the SALTO KS family while also being its most secure and attractive. It contains the most secure RFID chip on the market, meaning that the Tag ID cannot be duplicated under any circumstances.
+
+Key (Nebula): A carrier that controls access to an area, building, and/or installation asset (for example, a cupboard or locker). Keys come in a wide variety of formats, including wristbands, fobs, keycards and mobile keys."
+,Read key,,,,,"Read key (SPACE): In the case of keys that are found and the owner is unknown, you can read the key details by placing the key on the encoder."
+,Visitor check-in,,,,,
+,Visitor check-out,,,,,Visitor check-out (SPACE): The visitor key can no longer be used to access any area of the site when checked out.
+,Delete key,,,,,"Delete key (SPACE): You can remove a user’s access to a site by deleting all their access data from their key. When all information has been removed from their key, the user may still exist on the system, but they can no longer use their key with any of the access points."
+,Reset locker data,,,,,
+,Automatic key update,,,,,"You can configure the system to assign keys to users automatically by using the User tab in ProAccess SPACE General options. This option is particularly useful in university sites, for example, where thousands of new users (students) arrive at the start of each academic year. The automatic key assignment functionality means that users do not have to wait in line to have their key encoded. Instead, their key is assigned automatically when it is presented to an SVN wall reader, or an encoder with a running update reader. "
+Monitoring,Monitoring,,Activity,,,"Monitoring (SPACE): monitoring permits users to track what happens in the property. It allows consulting the audit trail and see WHO, WHERE and WHAT was made in the property. It also allows real time monitoring in online doors or manage the parking occupancy for example."
+,Audit trail,Entries/Events,Activity,Log,,"Audit trail (SPACE): The Audit trail information screen shows a list of events for each access point. Each event has a date and time stamp. By default, it shows events for the previous seven days only.
+Activity (Nebula): Activity details different types of events that are taking place within your installation. In this section a user can see when an access point was created or whether an access point has been opened, for example. Activity is composed of two broad types of events: system and device events."
+,Online monitoring,,,,,Online monitoring (SPACE): The online lock monitoring functionality allows you to view and control the status of online control units (CUs) in real-time. It also allows you to perform actions on doors like setting the emergency open or emergency close mode. Online CUs also enable the blacklist to be transmitted automatically to doors without the need to visit each door with an updated key.
+,Lockdown monitoring,,,,,Lockdown (SPACE):A lockdown area is a defined area where all access points can be closed or opened in an emergency situation.
+,Limited occupancy monitoring,,,,,"Limited occupancy (SPACE): In ProAccess SPACE, the limited occupancy areas functionality allows you to designate an area, for example a car park, and specify the maximum number of permitted users within that area. The limited occupancy group is a grouping of users who require access to a specified limited occupancy area."
+,Roll-call monitoring,,,,,
+,Relay outputs,,,,,
+Hotel,Hotel,,,,,
+,Room status,,,,,
+,Check-in,,,,,
+,Check-in groups,,,,,
+,Check-out,,,,,
+,Copy guest key,,,,,Copy guest key (SPACE): You can make up to 10 copies of a guest key at a time. This is useful if the room is occupied by more than one guest.
+,Cancellation of guest lost keys,,,,,"Cancel guest keys (SPACE): You can cancel guest keys if the guest has lost the key or if the guest leaves before the check-out date, taking the key with them. This sends the key to the blacklist, and prevents the key being used by someone other than the original guest. If the guest has only been given access to their room, a guest cancelling key can be used to prevent unauthorized access. However, if the guest has access to optional facilities such as the hotel leisure centre, it is recommended that you use the Cancellation of guest lost keys option."
+,One shot key,,,,,One shot key (SPACE): You can configure a key to be used only once. A one shot key can be valid for up to four rooms at any one time. This is useful if a guest wants to view a number of rooms before checking in.
+,Programming & spare keys,,,,,You can pre-program a programming key and edit spare keys for use in case a hotel power failure occurs or an encoder failure.
+,Guest cancelling key,,,,,"You can configure a key to be used by hotel staff to deny a guest with a valid key access to a room. This is useful if hotel management need to speak with the guest before they re-enter their room for example. Once a guest cancelling key is used, a new guest check-in is required to allow the guest to access the room. However, the guest’s key is not sent to the blacklist."
+,Room cleaner key,,,,,You can configure keys to be used by room cleaning staff to let front-desk operators know that the room is ready for occupancy.
+Tools,Tools,,,,,
+,Entity exportation,,,,,
+,Scheduled jobs,,,,,
+,Synchronization,,,,,
+,Make DB Backup,,,,,
+,Events streams,,,,,
+,Card printing,,,,,
+,Alarm events,,,,,
+,Reports,,,,,
+System,System,,,,,"Provides system audit functionality, tracking event and object modifications. This menu also contains specific administration functionality such as managing peripherals and scheduled jobs, and adding and deleting operators, operator groups, and partitions. There is also a calendar option that can be used to control access in different geographical areas, and configure holiday and special day periods."
+,System auditor,,,,,The System Auditor information screen shows a list of all system operator events.
+,Visits history,,,,,
+,Operators,"Site owner
+Site User
+Site Admin
+Site super user","System manager
+User manager
+Access right manager
+Device manager ",,,"Operators (SPACE):
+The system has one default operator: admin. However, there are no limitations on the number of operators that can be added. The admin operator has full access to all of the menus and functionality within SPACE. However, other types of operators that you create, such as hotel operators, can have their access restricted to a subset of menus and functionality, depending on the permissions you set for their operator group.
+
+Role (Nebula): You can grant users a series of permissions to manage Nebula depending on your requirements. The ability to manage other users' permissions and access rights as well as the management of devices in the system depends on the role you grant to a user. "
+,Operator groups,,Management roles,,,"Roles (Nebula): The following four pre-defined roles exist in Nebula:
+- System manager
+- User manager
+- Access right manager
+- Device manager
+Operator Groups (SPACE):
+The system has one default operator group: Administrator. An operator can create, delete, and edit operator groups within his own group depending on the operator group permissions set by the admin operator. An operator cannot give operator groups any permissions other than those that he himself has been granted themselves.
+Operator groups are defined according to two operator types:
+- Administrator: This refers to the default operator group on the system.
+- Standard: This refers to any operator group that you add to the system."
+,Partitions,Pod,Unit,Pod,,"Partition (SPACE): Items within the system that are grouped together for ease of management. Partitions allow admin operators to separate a SALTO network into different ‘parts’ that are then individually managed by other operators.
+Unit (Nebula): A unit is a sub-grouping within an installation. A common use case for a unit might be a rented apartment located within an apartment block or a coworking office inside a larger office block. It's perhaps useful to consider that a unit is generally a leasable entity."
+,PPD,,,,,"Portable Programming Device – a portable electronic device that can be physically connected to a lock. This device communicates information such as door identification and configuration details to the lock. It is used to initialize locks and update offline doors, as well as other maintenance tasks."
+,Desktop reader,,,,,"A device that can read keys, for example, a wall reader or an encoder"
+,SALTO Network,,,,,"The SALTO network includes items like encoders, gateways, radio frequency (RF) nodes, CU4200 nodes, online doors, and CUs. These are added and managed in ProAccess SPACE"
+,Calendar,,Calendar,,,"Calendar (SPACE): The calendars functionality defines your organization’s working calendar. For example, you can define public holidays, company holidays, and company shutdowns. If your organization consists of multiple sites that operate according to different workday calendars, a separate calendar can be created for each site. Up to 255 calendars can be set up on the SALTO system.
+A calendar day can be defined as a normal day, a holiday (H1), or a special day (there are two special day definitions available, S1 and S2). Special days may be site- specific holidays or site shutdown days. After you have created a calendar, you can then set up time periods, automatic changes, and cardholder timetables specific to each day type or user."
+,Time zones,,,,,"Time zone (SPACE): The system has one default time zone. However, you can use multiple time zones in ProAccess SPACE if required. If, for example, a company has offices operating in different time zones, this should be reflected in the system."
+,General options,,,,,
+,SAM & Issuing options,,,,,
+,Third party readers,,,,,
+,Attendance configuration,,,,,
+,PMS Authorizations,,,,,
+,System resources,,,,,
+,Peripheral,,,,,Peripheral (SPACE): An external hardware device such as an encoder or PPD that is used to perform routine system management tasks. This term can also refer to a device such as an ESD which is mounted on a wall and used to activate the electrical devices in a room or an area.
+,MAX. ACCESS DATE,,,,,
+,,,,,,
+,INTERNATIONAL PHONE NUMBER,,,,,
+,ROM CODE (AUTOMATIC ASSIGNMENT),,,,,
+,Blacklist/Whitelist,,Denylist/Allowlist,,,"Blacklist (SPACE): A record of all cancelled keys. Once a key has been cancelled, the information is communicated from the system to the SVN wall readers. As users update their keys and present their keys to the lock, the new blacklist information is circulated to all access points."
+,BAN USER,Block a Person,Block?,,,"Ban (SPACE): After you have created and configured a user, you can, if necessary, ban a user from accessing any part of a site by invalidating their key. For example, a user who is a member of staff can be banned while they are on vacation. Unbanning the user when they return from vacation restores their original access data to their key (after presenting the key to an SVN wall reader).
+Banning users is different from cancelling keys. A user’s key can be cancelled, for example, if a user loses their key. See Cancelling Keys for more information. The blacklist is a record of cancelled keys. Banned users are not added to the blacklist."
+,Ext ID,,user_id,,,Unique identifier for third-party integrators
+,ROM code (Automatic assignment),,,,,
+,Authorization code,,,,,
+,,,,,,
+,KEY OPTIONS,,,,,
+,Use extended opening time,,,,,
+,Override privacy,Override privacy mode,,,,
+,Override lockdown,,,,,
+,Set lockdown,,,,,
+,Office,"Easy Office Mode
+Manual Office Mode",,,,"Office mode (SPACE): The lock can be left open by any user who has the Office option selected in their user profile and has access to the door. See Key Options for more information. To activate Office mode, present the key to the lock, while keeping the inner handle pressed down. To disable the Office mode, repeat the procedure."
+,Use antipassback,,,,,A security mechanism that prevents a person from using a key to enter an area a second time without first exiting (so that the card cannot be passed back to a second person who wants to enter)
+,Audit opening in the key,,,,,
+,USER AND KEY EXPIRATION,,,,,
+,User activation,,,,,
+,,,,,,
+,,,,,,
+,User expiration,,,,,
+,,,,,,
+,,,,,,
+,Enable revalidation of key expiration,,,,,
+,Update period,,,,,
+,days,,,,,
+,hours,,,,,
+,FINGERPRINT AND PIN CODE,,,,,
+,PIN code,,,,,
+,Fingerprint,,,,,
+,USB,,,,,
+,Access with PIN instead of fingerprint,,,,,
+,Super user (access without PIN or fingerprint),,,,,
+,MOBILE PHONE DATA,,,,,
+,Mobile app,,App,,,
+,International phone number,,,,,
+,LIMITED OCCUPANCY GROUP,,,,,
+,CARD PRINTING TEMPLATE,,,,,
+,ASSIGN KEY,,,,,
+,ACCESS POINTS,,,,,
+,USER ACCESS LEVELS,,,,,
+,ZONES,,,,,
+,OUPUTS,,,,,
+,LOCATIONS/FUNCTIONS,,,,,
+,PRINT,,,,,
+,KEYS,Tags,,,,
+,UPDATE,,,,,
+,CANCEL,,,,,
+,REFRESH,,,,,
+,DELETE,,,,,
+,MULTIPLE EDIT,,,,,
+,ADD,,,,,
+,ITEMS,,,,,
+,ACTIVATION,,,,,
+,EXPIRATION,,,,,
+,VISITOR ACCESS LEVELS,,,,,
+,HOST,,,,,
+,VISITOR INFO,,,,,
+,Name,,,,,
+,Host,,,,,
+,Access level,,Access right,,,"Access level: A defined group of users with the same access permissions, for example, all staff in a department or all managerial staff.
+Access right: Represents a materialized view or snapshot of access permissions. Access rights simplify the management of access permissions for large sets of users with similar access profiles. An access right can be associated with multiple access points."
+,Regular visitor,,,,,
+,PARTITION,,Unit,,,
+,CHECK-IN INFO,,,,,
+,Start date,,,,,
+,Date of Expiry,,,,,
+,CREDENTIALS,,,,,
+,Send mobile key to a phone,Mobile key,Assign app key to user,,,
+,GUESTNAME,,,,,
+,PARTITION,,,,,
+,IDENTIFICATION,,,,,
+,Guest name for check-in group,,,,,
+,guestname,,,,,
+,KEY OPTIONS,,,,,
+,Use extended opening time,,,,,
+,GUEST ACCESS LEVELS,,,,,
+,DESTINATIONS,,,,,
+,,,,,,
+Note:,,,,,,
+The following list details the main four user roles in Homelok and a rough approximation of their potential counterparts in Nebula:,,,,,,
+,,,,,,
+Property manager (Nebula equivalent = system manager/owner),,,,,,
+Apartment/pod manager (Nebula equivalent = unit manager),,,,,,
+Pod member (Nebula equivalent = similar to a user manager and/or access rights manager),,Pod Member,,,,
+Pod guest (Nebula equivalent = 'user of keys'),,Pod Guest,,,,
