@@ -3,12 +3,16 @@ site_description: "Documentation test"
 
 nav:
   - Introduction: index.md
-  - Contributing: contributing.md
-  - Authentication: authentication.md
-  - Errors: errors.md
-  - Filter: filter.md
-  - Pagination: pagination.md
-  - Glossary: glossary.md
-  - Mermaid example: mermaid-example.md
+  - 'First folder': 
+    - 'Glossary' : 'subfolder/glossary.md'
+  - 'Second folder':
+    - 'Autehntication': 'subfolder2/authentication.md'
+    - 'Contribuiting': 'subfolder2/contributing.md'
+    - 'Errors': 'subfolder2/errors.md'
+  - 'Third folder':
+    - 'Filter': 'subfolder3/filter.md'
+    - 'Mermaid example': 'subfolder3/mermaid-example.md'
+    - 'Pagination': 'subfolder3/pagination.md'
+
 plugins:
   - techdocs-core
